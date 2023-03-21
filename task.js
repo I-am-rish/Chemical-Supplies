@@ -9,6 +9,7 @@ const allCheck = document.getElementById("allCheck");
 const wrapper = document.getElementById("wrapper");
 
 
+let jsonArray = [];
 // get data from localStorage
 const getDataFromLocalStrorage = () => {
   const arr = localStorage.getItem("jsonArray");
