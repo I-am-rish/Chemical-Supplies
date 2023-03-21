@@ -8,48 +8,6 @@ const allCheck = document.getElementById("allCheck");
 
 const wrapper = document.getElementById("wrapper");
 
-let jsonData = [
-  {
-    chemicalName: "Glycol Ether PM",
-    vendor: "LG Chem",
-    density: 6495.18,
-    viscosity: 72.12,
-    packaging: "Bag",
-    packSize: 250.0,
-    unit: "kg",
-    quantity: 8749.54,
-  },
-  {
-    chemicalName: "Ferric Nitrate",
-    vendor: "DowDuPont",
-    density: 364.04,
-    viscosity: 14.9,
-    packaging: "Bag",
-    packSize: 105.0,
-    unit: "kg",
-    quantity: 4154.33,
-  },
-  {
-    chemicalName: "Sodium chloride",
-    vendor: "ABC Chemicals",
-    density: 2.16,
-    viscosity: 0.0008,
-    packaging: "Bag",
-    packSize: 25.0,
-    unit: "kg",
-    quantity: 100.0,
-  },
-  {
-    chemicalName: "Acetic acid",
-    vendor: "Jigs Chem",
-    density: 1.05,
-    viscosity: 0.0012,
-    packaging: "Drum",
-    packSize: 200,
-    unit: "l",
-    quantity: 50.0,
-  },
-];
 
 // get data from localStorage
 const getDataFromLocalStrorage = () => {
@@ -65,7 +23,6 @@ const getDataFromLocalStrorage = () => {
 // set data in localStorage
 const setDataInLocalStorage = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value));
-    // localStorage.setItem(key, value);
 }
 
 // render data on page load
@@ -201,7 +158,6 @@ saveBtn.addEventListener("click", () => {
       console.log(rowData);
       setDataInLocalStorage("jsonArray", localStorageData);
     }
-    // setDataInLocalStorage("jsonArray", jsonData);
 
   const tr = document.getElementById("dummyRow");
   tr.remove();
@@ -227,21 +183,18 @@ const createData = (obj, idx) => {
 
   const td3 = document.createElement("td");
   const chemicalNameInput = document.createElement("p");
-  //   chemicalNameInput.id = "chemicalName";
   chemicalNameInput.innerHTML = obj.chemicalName;
   td3.appendChild(chemicalNameInput);
   tr.appendChild(td3);
 
   const td4 = document.createElement("td");
   const vendorInput = document.createElement("p");
-  //   vendorInput.id = "vendor";
   vendorInput.innerHTML = obj.vendor;
   td4.appendChild(vendorInput);
   tr.appendChild(td4);
 
   const td5 = document.createElement("td");
   const densityInput = document.createElement("input");
-  //   densityInput.id = "density";
   densityInput.type = "number";
   densityInput.value = obj.density;
   td5.appendChild(densityInput);
@@ -249,7 +202,6 @@ const createData = (obj, idx) => {
 
   const td6 = document.createElement("td");
   const viscosityInput = document.createElement("input");
-  //   viscosityInput.id = "viscosity";
   viscosityInput.type = "number";
   viscosityInput.value = obj.viscosity;
   td6.appendChild(viscosityInput);
@@ -257,28 +209,24 @@ const createData = (obj, idx) => {
 
   const td7 = document.createElement("td");
   const packagingInput = document.createElement("p");
-  //   packagingInput.id = "packaging";
   packagingInput.innerHTML = obj.packaging;
   td7.appendChild(packagingInput);
   tr.appendChild(td7);
 
   const td8 = document.createElement("td");
   const packSizeInput = document.createElement("p");
-  //   packSizeInput.id = "packSize";
   packSizeInput.innerHTML = obj.packSize;
   td8.appendChild(packSizeInput);
   tr.appendChild(td8);
 
   const td9 = document.createElement("td");
   const unitInput = document.createElement("p");
-  //   unitInput.id = "unit";
   unitInput.innerHTML = obj.unit;
   td9.appendChild(unitInput);
   tr.appendChild(td9);
 
   const td10 = document.createElement("td");
   const quantityInput = document.createElement("input");
-  //   quantityInput.id = "quantity";
   quantityInput.type = "number";
   quantityInput.value = obj.quantity;
   td10.appendChild(quantityInput);
