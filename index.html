@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="task.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="chemicalSupplies">
+      <div class="header">
+        <div>
+          <h2>Chemical supplies</h2>
+        </div>
+        <div class="functionality">
+          <button id="addBtn">
+            <img src="/func_Img/plus.png" alt="" width="20px" />
+          </button>
+          <button id="downArrow">
+            <img src="/func_Img/arrow-down.png" alt="" width="20px" />
+          </button>
+          <button id="upArrow">
+            <img src="/func_Img/up-arrow.png" alt="" width="20px" />
+          </button>
+          <button id="deleteBtn">
+            <img src="/func_Img/delete.png" alt="" width="20px" />
+          </button>
+          <button id="refreshBtn">
+            <img src="/func_Img/refresh.png" alt="" width="20px" />
+          </button>
+          <button id="saveBtn">
+            <img src="/func_Img/save.png" alt="" width="20px" />
+          </button>
+        </div>
+      </div>
+      <table>
+        <tbody id="wrapper">
+          <tr>
+            <th><input type="checkbox" id="allCheck" /></th>
+            <th>Id</th>
+            <th id="__chemicalName">Chemical name</th>
+            <th id="__vendor">Vendor</th>
+            <th id="__density">Density</th>
+            <th id="__viscosity">Viscosity</th>
+            <th id="__packaging">Packaging</th>
+            <th id="__packSize">Pack size</th>
+            <th id="__unit">Unit</th>
+            <th id="__quantity">Quantity</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- script -->
+    <script src="task.js"></script>
+  </body>
+</html>
