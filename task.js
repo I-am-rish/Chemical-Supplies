@@ -274,6 +274,11 @@ upArrow.addEventListener("click", () => {
       if (row.id > 0) {
         wrapper.insertBefore(row, wrapper.children[row.id]);
         let n = Number(row.id);
+        let arrData = getDataFromLocalStrorage();
+        let obj = arrData[n];
+        arrData.splice(n, 1);
+        arrData.splice(n - 1, 0, obj);
+        setDataInLocalStorage("jsonArray", arrData);
         wrapper.childNodes[3 + n].id = Number(wrapper.childNodes[3 + n].id) + 1;
         row.id--;
       }
@@ -291,6 +296,11 @@ downArrow.addEventListener("click", () => {
         let n = Number(row.id) + 2;
         wrapper.insertBefore(wrapper.children[n], row);
         let m = Number(row.id);
+        let arrData = getDataFromLocalStrorage();
+        let obj = arrData[m];
+        arrData.splice(m, 1);
+        arrData.splice(m+1, 0, obj);
+        setDataInLocalStorage("jsonArray", arrData);
         wrapper.childNodes[3 + m].id = Number(wrapper.childNodes[3 + m].id) - 1;
         row.id++;
       }
