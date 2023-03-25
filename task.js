@@ -338,6 +338,11 @@ allCheck.addEventListener("change", () => {
     checkBox.forEach((teg) => {
       teg.checked = true;
     });
+  }else{
+    const checkBox = document.querySelectorAll("#checkbox");
+    checkBox.forEach((teg) => {
+      teg.checked = false;
+    });
   }
 });
 
