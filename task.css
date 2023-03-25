@@ -36,6 +36,7 @@ table {
 
 th {
     margin-right: 20px;
+    cursor: pointer;
 }
 
 td:nth-of-type(2) {

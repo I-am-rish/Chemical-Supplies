@@ -67,7 +67,7 @@ addNewData.addEventListener("click", () => {
   const td5 = document.createElement("td");
   const densityInput = document.createElement("input");
   densityInput.id = "density";
-  densityInput.value = 0;
+//   densityInput.value = 0;
   densityInput.type = "number";
   td5.appendChild(densityInput);
   tr.appendChild(td5);
@@ -75,7 +75,7 @@ addNewData.addEventListener("click", () => {
   const td6 = document.createElement("td");
   const viscosityInput = document.createElement("input");
   viscosityInput.id = "viscosity";
-  viscosityInput.value = 0;
+//   viscosityInput.value = 0;
   viscosityInput.type = "number";
   td6.appendChild(viscosityInput);
   tr.appendChild(td6);
@@ -104,7 +104,7 @@ addNewData.addEventListener("click", () => {
   const td10 = document.createElement("td");
   const quantityInput = document.createElement("input");
   quantityInput.id = "quantity";
-  quantityInput.value = 0;
+//   quantityInput.value = 0;
   quantityInput.type = "number";
   td10.appendChild(quantityInput);
   tr.appendChild(td10);
