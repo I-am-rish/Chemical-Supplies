@@ -21,7 +21,7 @@ const getDataFromLocalStrorage = () => {
   }
 };
 
-// set data in localStorage
+//set data in localStorage
 const setDataInLocalStorage = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value));
 }
