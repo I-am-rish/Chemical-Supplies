@@ -288,7 +288,7 @@ downArrow.addEventListener("click", () => {
   checkBox.forEach((teg) => {
     if (teg.checked) {
       const row = teg.parentElement.parentElement;
-      if (row.id < jsonData.length - 1) {
+      if (row.id < jsonArray.length - 1) {
         let n = Number(row.id) + 2;
         wrapper.insertBefore(wrapper.children[n], row);
         let m = Number(row.id);
