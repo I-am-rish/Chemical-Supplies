@@ -326,8 +326,13 @@ const rearrangeRowId = (id) => {
 // delete data from localStorage
 const deleteDataFromLocalStorage = (idx) => {
     const localStorageData = getDataFromLocalStrorage();
-    localStorageData.splice(idx, 1);
-    setDataInLocalStorage("jsonArray", localStorageData);
+    if(allCheck.checked){
+        setDataInLocalStorage("jsonArray", []);
+        allCheck.checked = false;
+    }else{
+        localStorageData.splice(idx, 1);
+        setDataInLocalStorage("jsonArray", localStorageData);
+    }
 }
 
 // to check all rows
