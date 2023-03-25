@@ -156,7 +156,6 @@ saveBtn.addEventListener("click", () => {
       setDataInLocalStorage("jsonArray", jsonData);
   }else {
       localStorageData.push(rowData);
-      console.log(rowData);
       setDataInLocalStorage("jsonArray", localStorageData);
     }
 
@@ -288,7 +287,7 @@ downArrow.addEventListener("click", () => {
   checkBox.forEach((teg) => {
     if (teg.checked) {
       const row = teg.parentElement.parentElement;
-      if (row.id < jsonData.length - 1) {
+      if (row.id < jsonArray.length - 1) {
         let n = Number(row.id) + 2;
         wrapper.insertBefore(wrapper.children[n], row);
         let m = Number(row.id);
@@ -338,6 +337,11 @@ allCheck.addEventListener("change", () => {
     checkBox.forEach((teg) => {
       teg.checked = true;
     });
+  }else{
+    const checkBox = document.querySelectorAll("#checkbox");
+    checkBox.forEach((teg) => {
+      teg.checked = false;
+    });
   }
 });
 
@@ -384,3 +388,4 @@ const sortDataForString = (id) => {
     refreshUIData();
 
 }
+

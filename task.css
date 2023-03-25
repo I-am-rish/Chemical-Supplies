@@ -1,59 +1,55 @@
-/* body, th{
-    background-color: rgb(196, 195, 199);
-} */
-
-.chemicalSupplies{
+.chemicalSupplies {
     width: 65%;
     margin-left: 17.5%;
 }
-.header{
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
 }
 
-button{
+button {
     border: none;
     background: transparent;
 }
 
-input{
+input {
     text-align: right;
     width: 70px;
 }
 
-p, span,th{
+p,
+span,
+th {
     text-align: left;
     padding: 0 10px 0 0;
 }
 
 
-table{
+table {
     border-collapse: collapse;
     border: 1px solid black;
     width: 100%;
 }
 
-th{
+th {
     margin-right: 20px;
 }
 
-td:nth-of-type(2){
+td:nth-of-type(2) {
     width: 25px;
 }
 
-td:nth-of-type(3){
+td:nth-of-type(3) {
     width: 190px;
 }
 
-th{
+th {
     padding: 10px 0 40px 0;
 }
 
-tr:hover{
+tr:hover {
     background-color: rgb(190, 190, 194);
 }
-
-
-
